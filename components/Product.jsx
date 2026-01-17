@@ -11,7 +11,7 @@ function Product({detail}) {
           <div className='flex items-center gap-10 '> 
             {detail.live && <Button  />}
             {detail.live && <Button title="Case Study" />}
-
+ 
             
           </div>
       </div>
@@ -19,5 +19,6 @@ function Product({detail}) {
     </div>
   )
 }
+
 
 export default Product

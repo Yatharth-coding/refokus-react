@@ -19,7 +19,7 @@ function Products() {
         },
     ]
   return (
-    <div>
+    <div className='mt-10'>
       {data.map((elem,index)=>(<Product detail={elem} />))}
     </div>
   )

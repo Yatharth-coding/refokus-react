@@ -28,7 +28,7 @@ function Marquees() {
         ]
     ]
     return (
-        <div className=''>
+        <div className='py-15'>
             {images.map((elem,index)=> {
                 return <Marquee key={index} imagesUrl={elem} />
             })}

@@ -12,9 +12,12 @@ function Work() {
     {url:"https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef0af108a465002975acd_Showcase%20Websites%20(1).png" , top:"72%" , left:"48%" , isActive : false},
 
   ]
+
+
+
   return (
     <div>
-    <div className="w-full mt-10 ">
+    <div className="w-full mt-0 ">
       <div className='relative max-w-screen-xl mx-auto text-center'>
         <h1 className="text-[12vw] scale-[3] origin-center font-semibold leading-none select-none mt-40 mb-40">
   work

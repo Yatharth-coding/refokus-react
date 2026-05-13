@@ -29,7 +29,7 @@ function Marquees() {
         ]
     ]
     return (
-        <div className='py-20 mt-20 overflow-hidden w-full relative'>
+        <div className='pb-30  overflow-hidden w-full relative'>
             {images.map((elem,index)=> {
                 return <Marquee key={index} imagesUrl={elem} index={index} direction={index===0 ? "left" : "right"} />
             })}

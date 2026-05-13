@@ -20,7 +20,7 @@ function Products() {
     ]
   return (
     <div className='mt-10'>
-      {data.map((elem,index)=>(<Product detail={elem} />))}
+      {data.map((elem,index)=>(<Product key={index} detail={elem} />))}
     </div>
   )
 }

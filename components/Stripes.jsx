@@ -16,9 +16,9 @@ function Stripes() {
     ]
 
   return (
-    <div className='flex items-center pt-20 '>
+    <div className='flex items-center pt-7 '>
       {images.map((elem , index) => {
-        return <Stripe data={elem} />
+        return <Stripe key={index} data={elem} />
       })}
       
     </div>

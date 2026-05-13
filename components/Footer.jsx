@@ -8,12 +8,12 @@ function Footer() {
       <div className='flex  '>
           <div className='flex flex-col basis-1/4'>
             <h4 className='text-zinc-500 mb-12'>Socials</h4>
-            {["Instagram",  "Twitter (x?)", "LinkedIn"].map((item,index) => <a className='mt-3 text-zinc-500 tracking-tighter'>{item}</a>)}
+            {["Instagram",  "Twitter (x?)", "LinkedIn"].map((item,index) => <a key={index} className='mt-3 text-zinc-500 tracking-tighter'>{item}</a>)}
           </div>
 
           <div className='flex flex-col basis-1/4'>
             <h4 className='text-zinc-500 mb-12'>Sitemap</h4>
-            {["Home" , "Work" ,"Carrer" , "Contact" ].map((item,index)=><a className='mt-3 text-zinc-200'>{item}</a> )}
+            {["Home" , "Work" ,"Carrer" , "Contact" ].map((item,index)=><a key={index} className='mt-3 text-zinc-200'>{item}</a> )}
           </div>
 
           <div className='flex flex-col mt-22 basis-1/2 items-end'>
@@ -23,7 +23,7 @@ function Footer() {
       </div>
     </div>
     <div className='max-w-screen-xl mx-auto'>
-      {["Privacy Policy", "Terms of Service", "Cookie Policy" , "Impression"].map((item,index)=><span className='text-zinc-600 text-sm mr-7'>{item}</span> )}
+      {["Privacy Policy", "Terms of Service", "Cookie Policy" , "Impression"].map((item,index)=><span key={index} className='text-zinc-600 text-sm mr-7'>{item}</span> )}
     </div>
     </div>
   )

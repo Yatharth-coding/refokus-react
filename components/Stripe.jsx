@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Stripe({data}) {
+function Stripe({data }) {
     
   return (
     <div className='flex w-[17%] justify-between items-center max-w-70 mt-10 py-5 px-5 border-zinc-600 border-1'>

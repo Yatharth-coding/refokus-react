@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 function Work() {
-
-    const [images, setImages] = useState([
+  const [images, setImages] = useState([
     {
       url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef09178195ce0073e38f3_Refokus%20Tools-1.png",
       top: "10%",
@@ -42,54 +41,45 @@ function Work() {
     },
   ]);
 
-
   const { scrollYProgress } = useScroll();
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // console.log("Page scroll: ", Math.floor(latest*100))
 
-    function showHiddenImages(arr){
-
-        setImages(prev=> {
-          return prev.map((item,index)=> (
-            arr.indexOf(index) === -1 ?(
-              {...item , isActive : false}
-            )
-            :(
-              {...item , isActive:true}
-            )
-          )) ;
-        })
+    function showHiddenImages(arr) {
+      setImages((prev) => {
+        return prev.map((item, index) =>
+          arr.indexOf(index) === -1
+            ? { ...item, isActive: false }
+            : { ...item, isActive: true },
+        );
+      });
     }
 
-
-    latest = Math.floor(latest*100);
-    switch (latest) {
+    switch (Math.floor(latest * 100)) {
       case 0:
-        showHiddenImages([])
+        showHiddenImages([]);
         break;
       case 1:
-        showHiddenImages([0])
+        showHiddenImages([0]);
         break;
       case 2:
-        showHiddenImages([1,0])
+        showHiddenImages([1, 0]);
         break;
       case 3:
-        showHiddenImages([1,2,0])
+        showHiddenImages([1, 2, 0]);
         break;
       case 4:
-        showHiddenImages([1,2,3,0])
+        showHiddenImages([1, 2, 3, 0]);
         break;
       case 5:
-        showHiddenImages([1,2,3,4,0])
+        showHiddenImages([1, 2, 3, 4, 0]);
         break;
       case 6:
-        showHiddenImages([1,2,3,4,5,0])
+        showHiddenImages([1, 2, 3, 4, 5, 0]);
         break;
     }
   });
-
-
 
   return (
     <div>
@@ -104,6 +94,7 @@ function Work() {
               return (
                 elem.isActive && (
                   <img
+                    key={index}
                     className="w-60 absolute rounded-lg -translate-x-[50%] -translate-y-[50%]"
                     src={elem.url}
                     alt=""
